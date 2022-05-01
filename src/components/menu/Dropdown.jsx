@@ -13,9 +13,6 @@ const Dropdown = () => {
           readOnly
           onClick={() => setActive(!active)}
         ></input>
-        <span className="icon">
-          <ion-icon name="home-outline"></ion-icon>
-        </span>
       </div>
       <div className="options">
         <div>

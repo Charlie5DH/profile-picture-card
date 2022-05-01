@@ -7,6 +7,11 @@
   transition: 0.5s;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .page-link h2:hover {
   color: #fbda61;
 }
@@ -35,4 +40,101 @@
   align-items: center;
   margin-bottom: 5em;
   margin-right: 2em;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container .box {
+  position: relative;
+  width: 500px;
+  height: 110px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container .box:nth-child(1) {
+  transform: translateX(-80px);
+}
+
+.container .box:nth-child(3) {
+  transform: translateX(40px);
+}
+.container .box:nth-child(4) {
+  transform: translateX(100px);
+}
+
+.container:hover .box:nth-child(1) {
+  transform: translateX(0px);
+}
+
+.container:hover .box:nth-child(3) {
+  transform: translateX(0px);
+}
+
+.container:hover .box:nth-child(4) {
+  transform: translateX(0px);
+}
+
+.container .box::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background: rgb(243, 108, 108);
+  transition: 0.5s ease-in-out;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.container .box:hover::before {
+  width: 100%;
+}
+
+.container .box .list-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container .box .list-content .list-icon {
+  position: relative;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .box .list-content .list-icon ion-icon {
+  font-size: 2.5em;
+
+  transition: 0.5s ease-in-out;
+}
+
+.container .box:hover .list-content .list-icon ion-icon {
+  color: #fff;
+}
+
+.container .box .list-content .list-text h3 {
+  font-weight: 800;
+  color: #fbda61;
+  transition: 0.5s ease-in-out;
+}
+
+.container .box .list-content .list-text p {
+  font-weight: 500;
+  color: #999;
+  transition: 0.5s ease-in-out;
+}
+
+.container .box:hover .list-content .list-text p,
+.container .box:hover .list-content .list-text h3 {
+  color: #fff;
 }
