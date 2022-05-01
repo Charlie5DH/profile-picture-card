@@ -2,8 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<img src="card.png"/>
-<img src="card opened.png"/>
+<img src="./src/images/mainscren.png"/>
+<img src="./src/images/cards.png"/>
+<img src="./src/images/menu.png"/>
 
 ## Available Scripts
 
