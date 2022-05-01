@@ -1,0 +1,94 @@
+.dropdown {
+  position: relative;
+  margin-top: 30px;
+  width: 420px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  right: 20px;
+  top: 15px;
+  z-index: 1000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown input {
+  position: absolute;
+  font-size: 1em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown .dropdown-textbox .textBox {
+}
+
+.dropdown .options {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  transition: 0.5s;
+}
+
+.dropdown.active .options {
+  display: block;
+}
+
+.dropdown .dropdown-textbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+.dropdown .dropdown-textbox .icon ion-icon {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.dropdown .options div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdown .options div:hover {
+  color: #fff;
+  background: #eb7a6b;
+}
+
+.dropdown .options div ion-icon {
+  position: relative;
+  top: 4px;
+  font-size: 1.2em;
+  margin-right: 6px;
+}

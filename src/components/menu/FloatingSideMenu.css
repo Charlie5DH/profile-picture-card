@@ -1,0 +1,149 @@
+.floating-navigation {
+  width: 80px;
+  /* min-height: 200px; */
+  background: #fff;
+  box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: 0.5s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.floating-navigation.active {
+  width: 420px;
+}
+
+.floating-navigation .menu_toggle {
+  position: relative;
+  width: 80px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 20px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.floating-navigation .menu_toggle::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #333;
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+.floating-navigation .menu_toggle::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #333;
+  transform: translateY(10px);
+  transition: 0.5s;
+  box-shadow: 0 -10px #333;
+}
+
+.floating-navigation .menu_toggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.floating-navigation .menu_toggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+  box-shadow: 0 0 #333;
+}
+
+.floating-navigation .floating-navigation-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.floating-navigation
+  .floating-navigation-profile
+  .floating-navigation-imageBox {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.floating-navigation.active
+  .floating-navigation-profile
+  .floating-navigation-imageBox {
+  width: 200px;
+  height: 200px;
+}
+
+.floating-navigation
+  .floating-navigation-profile
+  .floating-navigation-imageBox
+  img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floating-navigation .floating-navigation-menu {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  transition: 0.5s;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.floating-navigation.active .floating-navigation-menu {
+  padding: 10px 20px;
+}
+
+.floating-navigation .floating-navigation-menu li {
+  list-style: none;
+}
+
+.floating-navigation .floating-navigation-menu li a {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: #111;
+  border-radius: 10px;
+}
+
+.floating-navigation .floating-navigation-menu li a:hover {
+  background: #eb7a6b;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.floating-navigation .floating-navigation-menu li a .icon {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+}
+
+.floating-navigation .floating-navigation-menu li a .text {
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+  margin-left: 10px;
+}
